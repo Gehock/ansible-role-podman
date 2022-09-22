@@ -1,6 +1,6 @@
 [Unit]
 Description={{ service.description | default("A podman service") }}
-{% if service.target is defined %}
+{% if service.after is defined %}
 After={{ service.after | join(',') }}
 {% endif %}
 
