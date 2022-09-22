@@ -17,7 +17,7 @@
 - name: Ubuntu | Upgrade System before install
   apt:
     upgrade: dist
-  when: podman_apt_repo.changed
+  when: podman_apt_repo.changed and podman_upgrade_system
 
 # Conmon requires libglib2.0 to be installed however, the ppa packages do not
 # include it as a dependency. This is an upstream packaging bug and this breaks

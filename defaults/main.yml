@@ -10,3 +10,5 @@ podman_tools:
     - buildah
     - skopeo
 podman_services: []
+
+podman_upgrade_system: yes
