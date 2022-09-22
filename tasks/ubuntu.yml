@@ -4,6 +4,7 @@
   apt_key:
     url: "{{ podman_apt_pub_key }}"
     state: present
+    keyring: /etc/apt/trusted.gpg.d/podman.gpg
 
 - name: Ubuntu | Add podman repository
   become: true
