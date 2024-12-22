@@ -27,6 +27,6 @@
   become_user: root
   systemd:
     name: "{{ __podman_service_name }}"
-    state: started
-    enabled: true
+    state: "{{ service.state | default('started') }}"
+    enabled: "{{ service.enabled | default('true') }}"
     daemon_reload: true
